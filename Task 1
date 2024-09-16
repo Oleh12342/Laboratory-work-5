@@ -1,0 +1,20 @@
+n = int(input("Введіть кількість елементів в масиві: "))
+
+print(f"Введіть {n} чисел в масив:")
+
+arr = [int(input()) for _ in range(n)]
+
+odd_elements = [i for i in arr if i < 0 and i % 2 != 0]
+
+if odd_elements:
+    average = sum(odd_elements) / len(odd_elements)
+    print(f"Середнє арифметичне непарних елементів: {average}")
+else:
+    print("Немає непарних елементів.")
+
+negative_elements = [i for i in arr if i < 0]
+
+if negative_elements:
+    print("Від’ємні елементи у зворотному порядку:", negative_elements[::-1])
+else:
+    print("Немає від’ємних елементів.")
